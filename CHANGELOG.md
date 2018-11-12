@@ -95,7 +95,7 @@ Alternately, the _Daily Diary of my Programming Dreams_.
 * Added [fiddles/extjs/fiddle-20150421-GridItemContextDistinctTagFilterMixin](fiddles/extjs/fiddle-20150421-GridItemContextDistinctTagFilterMixin)
 * Added [fiddles/extjs/fiddle-20150423-ComboBoxNumericFormatting](fiddles/extjs/fiddle-20150423-ComboBoxNumericFormatting)
 * Added [fiddles/extjs/fiddle-20150423-VanillaClassDebugHook](fiddles/extjs/fiddle-20150423-VanillaClassDebugHook)
-* Added [fiddles/php/fiddle-wpExtJSGrayTheme](fiddles/php/fiddle-wpExtJSGrayTheme)
+* Added [fiddles/php/fiddle-0009-WpExtJSGrayTheme](fiddles/php/fiddle-0009-WpExtJSGrayTheme)
 
 ### 201505011810
 
@@ -1965,5 +1965,8 @@ Alternately, the _Daily Diary of my Programming Dreams_.
 * **JQuery**
 
   1.  Added [fiddles/jquery/fiddle-0068-FabricThermometerImgMeniscus](fiddles/jquery/fiddle-0068-FabricThermometerImgMeniscus)
-* Added [fiddles/jquery/fiddle-0069-BootstrapStickyNavBars](fiddles/jquery/fiddle-0069-BootstrapStickyNavBars)
-* Added [fiddles/jquery/fiddle-0070-FabricThermometerAnimation](fiddles/jquery/fiddle-0070-FabricThermometerAnimation)
+  2.  Added [fiddles/jquery/fiddle-0069-BootstrapStickyNavBars](fiddles/jquery/fiddle-0069-BootstrapStickyNavBars)
+  3.  Added [fiddles/jquery/fiddle-0070-FabricThermometerAnimation](fiddles/jquery/fiddle-0070-FabricThermometerAnimation)
+
+
+### 261_php_fiddle_11 ~ [Issue 261](https://github.com/bradyhouse/house/issues/261)
