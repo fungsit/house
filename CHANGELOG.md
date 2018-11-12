@@ -95,7 +95,7 @@ Alternately, the _Daily Diary of my Programming Dreams_.
 * Added [fiddles/extjs/fiddle-20150421-GridItemContextDistinctTagFilterMixin](fiddles/extjs/fiddle-20150421-GridItemContextDistinctTagFilterMixin)
 * Added [fiddles/extjs/fiddle-20150423-ComboBoxNumericFormatting](fiddles/extjs/fiddle-20150423-ComboBoxNumericFormatting)
 * Added [fiddles/extjs/fiddle-20150423-VanillaClassDebugHook](fiddles/extjs/fiddle-20150423-VanillaClassDebugHook)
-* Added [fiddles/php/fiddle-0009-WpExtJSGrayTheme](fiddles/php/fiddle-0009-WpExtJSGrayTheme)
+* Added [fiddles/php/fiddle-wpExtJSGrayTheme](fiddles/php/fiddle-wpExtJSGrayTheme)
 
 ### 201505011810
 
@@ -1969,4 +1969,16 @@ Alternately, the _Daily Diary of my Programming Dreams_.
   3.  Added [fiddles/jquery/fiddle-0070-FabricThermometerAnimation](fiddles/jquery/fiddle-0070-FabricThermometerAnimation)
 
 
-### 261_php_fiddle_11 ~ [Issue 261](https://github.com/bradyhouse/house/issues/261)
+### 263_node_fiddle_29 ~ [Issue 263](https://github.com/bradyhouse/house/issues/263)
+
+* **fiddle.sh (Enhancement)**
+
+  1.  Added [scripts/bin/setup/mac/_php.sh](scripts/bin/setup/mac/_php.sh)
+  2.  Updated [scripts/bin/setup/_setup.sh](scripts/bin/setup/_setup.sh) 
+  3.  Updated [scripts/bin/_types.sh](scripts/bin/_types.sh)
+
+* **Node**
+
+  1.  Added [fiddles/node/fiddle-0029-NodePhp](fiddles/node/fiddle-0029-NodePhp)
+
+
