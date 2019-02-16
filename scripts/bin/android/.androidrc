@@ -14,9 +14,10 @@
 
 export __CREATE_PROJECT_TARGET__="2";
 export __CREATE_PROJECT_PACKAGE__="fiddle.android";
-export __CREATE_ANDROID_GRADLE_VERSION__="2.1.2";
+export __CREATE_ANDROID_GRADLE_VERSION__="3.2.1";
 export __CREATE_ANDROID_VERSION__="24.0.2";
 export __CREATE_GOOGLE_API_VERSION__="19";
 export __CREATE_GRADLE_VERSION__="2.10";
 export __START_ANDROID_EMULATOR_PROFILE__=fiddler;
-export __START_ANDROID_EMULATOR_EXE__="${HOME_ROOT}/homebrew/share/android-sdk/emulator/emulator";
+export __START_ANDROID_EMULATO R_EXE__="/usr/local/share/android-sdk/emulator/emulator";
+

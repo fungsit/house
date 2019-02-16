@@ -8,85 +8,72 @@ The `fiddle.sh` script can be used to extend or test drive this collection. The 
 [cols="2,2,5a"]
 |===
 |Create
-|`./fiddle.sh "create" "android" "fiddle-0000-Template"`
+|`fiddle "create" "android" "fiddle-0000-Template"`
 |link:create.md[sample output & additional details]
 |Emulate
-|`./fiddle.sh "emulate" "android"`
+|`fiddle "emulate" "android"`
 |link:emulate.md[sample output & additional details]
 |Fork
-|`./fiddle.sh "fork" "android" "0000" "fiddle-0003-TemplateFork"`
+|`fiddle "fork" "android" "0000" "fiddle-0003-TemplateFork"`
 |link:fork.md[sample output & additional details]
 |Delete
-|`./fiddle.sh "delete" "android" "0000"`
+|`fiddle "delete" "android" "0000"`
 |link:delete.md[sample output & additional details]
 |Refactor
-|`./fiddle.sh "refactor" "android" "0000" "fiddle-0100-EmptyTemplate"`
+|`fiddle "refactor" "android" "0000" "fiddle-0100-EmptyTemplate"`
 |link:refactor.md[sample output & additional details]
 |Start
-|`./fiddle.sh "start" "android" "0000"`
+|`fiddle "start" "android" "0000"`
 |link:start.md[sample output & additional details]
 |List
-|`./fiddle.sh "list" "android"`
+|`fiddle "list" "android"`
 |link:list.md[sample output & additional details]
 |===
 
-== Android Setup (Mac OS X)
 
-1. Install JDK 8 or a later stable official release.
-2. Go to Java SE Downloads and click Download for JDK.
-3. In the Java SE Development Kit section, accept the license agreement and click the download link for Mac OS X.
-4. Wait for the download to complete and install the JDK.
-5. In your `~/.bashrc` file, set the JAVA_HOME system environment variable.
-    `export JAVA_HOME=$(/usr/libexec/java_home)`
-6. In the terminal, run the following command
+== Android Studio Setup (Mac OS X)
+
+In order to build native Android apps, the best IDE is Android Studio. In addition, it provides easy access to the GUI
+versions of Android SDK and AVD Managers. The Studio bundle for Mac OS X can be downloaded from
+link:https://developer.android.com/studio/[developer.android.com/studio].
+
+
+== Android Commandline Setup (Mac OS X)
+
+In order to run android based fiddles, android commandline tools need to be setup. To complete this setup run
+`fiddle setup mac android` or complete the following steps manually.
+
+
+1.  Install Homebrew:
+
+    `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+
+2.  Install Java8:
+
+    `brew tap caskroom/versions`
+    `brew cask install java8`
+
+3.  Set the JAVA_HOME system environment variable in your .zshrc (and/or) .bash_profile files:
+
+    `export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)`
+
+4.  Install the Android SDK
+
     `brew cask install android-sdk`
-7. In the terminal, run the following command
-    `android update sdk --filter tools,platform-tools,android-23,build-tools-23.0.3,extra-android-m2repository,extra-google-m2repository,extra-android-support --all --no-ui`
-8. In the terminal, run the following command
-    `brew info android`
-9. Add the `export ANDROID_HOME=...` statement to your .bashrc file
-10. In the terminal, run the following command
-    `android avd`
-11. In the `Android Virtual Device (AVD) Manager`, create an Android Virtual Device, called `fiddler`
-12. To test your configuration, use the link:start.md[fiddle.sh start ...] command
 
-== Android Console Cheat Sheet
+5.  Set the ANDROID_HOME system environment variable in your .zshrc (and/or) .bash_profile files:
 
-Usage: `android [global options] action [action options]`
+    `export ANDROID_HOME=/usr/local/share/android-sdk`
 
-where valid actions are composed of a verb and an optional direct object
+6.  install all packages for the Android SDK Platform 28, Android SDK Build-Tools 28.0.3 or later, Android Support
+    Repository, Google Repository and any other SDKs that you may need:
 
-==== Global Options
-|=======================
-|-s --silent            |Silent mode, shows errors only
-|-v --verbose           |Verbose mode, shows errors, warnings and all messages
-|--clear-cache          |Clear the SDK Manager repository manifest cache
-|-h --help              |Help on a specific command
-|=======================
+    `$ANDROID_HOME/tools/bin/sdkmanager "tools" "emulator" "platform-tools" "platforms;android-28" "build-tools;28.0.3"
+    "extras;android;m2repository" "extras;google;m2repository"`
 
-==== Direct Objects
-|=======================
-|sdk                    |Displays the SDK Manager window
-|avd                    |Displays the AVD Manager window
-|list                   |Lists existing targets or virtual devices
-|list avd               |Lists existing Android Virtual Devices
-|list target            |Lists existing targets
-|list device            |Lists existing devices
-|list sdk               |Lists remote SDK repository
-|create avd             |Creates a new Android Virtual Device
-|move avd               |Moves or renames an Android Virtual Device
-|delete avd             |Deletes an Android Virtual Device
-|update avd             |Updates an Android Virtual Device to match the folders of a new SDK
-|create project         |Creates a new Android project
-|update project         |Updates an Android project (must already have an AndroidManifestxml)
-|create test-project    |Creates a new Android project for a test package
-|update test-project    |Updates the Android project for a test package (must already have an AndroidManifestxml)
-|create lib-project     |Creates a new Android library project
-|update lib-project     |Updates an Android library project (must already have an AndroidManifestxml)
-|create uitest-project  |Creates a new UI test project
-|update adb             |Updates adb to support the USB devices declared in the SDK add-ons
-|update sdk             |Updates the SDK by suggesting new platforms to install if available
-|=======================
+7.  Launch Android Studio and open `Android Virtual Device (AVD) Manager`, create an Android Virtual Device, called `fiddler`
+
+8.  To test your configuration, use the link:start.md[fiddle.sh start ...] command
 
 
 == Online Resources

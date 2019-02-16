@@ -13,6 +13,7 @@
 #  Revision History::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::|
 # ---------------------------------------------------------------------------------------------------|
 # Baseline Ver - CHANGELOG @ 201610010420
+# 12/10/2018 - See CHANGELOG @ 273_android_debug
 # ---------------------------------------------------------------------------------------------------|
 
 function isGradleInstalled() {
@@ -29,4 +30,13 @@ function isAndroidInstalled() {
   then
       exit -1;
   fi
+}
+
+function isGitInstalled() {
+  installed=$(isInstalled "git";);
+  if [[ "${installed}" == "false" ]]
+  then
+      exit -1;
+  fi
+
 }

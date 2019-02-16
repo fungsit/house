@@ -2059,3 +2059,13 @@ Alternately, the _Daily Diary of my Programming Dreams_.
   4.  Updated [fiddles/chef/stop.md](fiddles/chef/stop.md)
   5.  Updated [fiddles/chef/readme.adoc](fiddles/chef/readme.adoc)
   6.  Updated [scripts/fiddle-start.sh](scripts/fiddle-start.sh)
+
+
+### 273_android_debug ~ [Issue 272](https://github.com/bradyhouse/house/issues/272)
+
+* **fiddle.sh (Enhancement)**
+
+  1.  Updated [scripts/bin/_env.sh](scripts/bin/_env.sh)
+  2.  Updated [scripts/bin/android/_create.sh](scripts/bin/android/_create.sh)
+  3.  Updated [scripts/bin/android/_install.sh](scripts/bin/android/_install.sh)
+  4.  Updated [scripts/fiddle-create.sh](scripts/fiddle-create.sh)

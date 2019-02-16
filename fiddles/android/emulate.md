@@ -1,7 +1,7 @@
 Android (emulate)
 ======
 
-Executing the command `./fiddle.sh "emulate" "android"` from the `scripts` directory produces the following output.
+Executing the command `fiddle "emulate" "android"` from the `scripts` directory produces the following output.
 
     {{ ʕ・ɭ・ʔ }}
     FIDDLE.SH

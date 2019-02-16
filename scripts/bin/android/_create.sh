@@ -14,6 +14,7 @@
 # ---------------------------------------------------------------------------------------------------|
 # Baseline Ver - CHANGELOG @ 201610010420
 # 12/11/2016 - See CHANGELOG @ 201611280420
+# 12/10/2018 - See CHANGELOG @ 273_android_debug
 # ---------------------------------------------------------------------------------------------------|
 
 
@@ -28,7 +29,13 @@ function initAndroidProject() {
   appName=$(capitalize $1;);
   #try
   (
-    android create project -a ${appName} -k ${__CREATE_PROJECT_PACKAGE__} -t ${__CREATE_PROJECT_TARGET__} -g -v ${__CREATE_GRADLE_VERSION__} -p $1
+    git clone --depth 1 ${__ANDROID_SEEDER} ${appName} || exit $?;
+    if [[ -d "${appName}" ]]
+    then
+      rm -rf "${appName}/.git" || exit $?;
+      rm -rf "${appName}/.gitignore" || exit $?;
+
+    fi
   )
   #catch
   rc=$?; case ${rc} in
@@ -55,31 +62,6 @@ function initGradle() {
   esac
 }
 
-function initGradleConfig() {
-  groupLog "initGradleConfig";
-  #try
-  (
-    cd gradleCfg;
-    $(voidSubstr '{{{androidVersion}}}' ${__CREATE_ANDROID_VERSION__} "build.gradle";)
-    $(voidSubstr '{{{androidGradlePluginVersion}}}' ${__CREATE_ANDROID_GRADLE_VERSION__} "build.gradle";)
-    $(voidSubstr '{{{GoogleApiVersion}}}' ${__CREATE_GOOGLE_API_VERSION__} "build.gradle";)
-    $(voidSubstr '{{{gradleVersion}}}' ${__CREATE_GRADLE_VERSION__} "gradle-wrapper.properties";)
-    cd ..;
-    cp -rf gradleCfg/build.gradle $1;
-    cp -rf gradleCfg/gradle-wrapper.properties "$1/gradle/wrapper/gradle-wrapper.properties";
-    rm -rf gradleCfg;
-  )
-  #catch
-  rc=$?; case ${rc} in
-    0)  groupLog "gradlew check - successful."
-        ;;
-    *)  exit 6;
-        ;;
-  esac
-
-}
-
-
 function initFiddleDirectory() {
   groupLog "initFiddleDirectory";
   local fiddle=$1;
@@ -93,7 +75,6 @@ function initFiddleDirectory() {
   $(voidSubstr '{{Title}}' ${projectName} "README.md";) || exit 3;
   $(voidSubstr '{{BornOnDate}}' ${bornOnDate} "README.md";) || exit 3;
   initAndroidProject ${projectName} || exit $?;
-  initGradleConfig ${projectName} || exit $?;
   initGradle "${projectName}"
 }
 
@@ -144,6 +125,8 @@ function catch() {
             ;;
         4)  endLog "cannot access root android fiddle directory.";
             ;;
+        5)  endLog "git not installed or configured properly.";
+            ;;
         *)  endLog "fubar! Something went wrong."
             ;;
     esac
@@ -172,6 +155,7 @@ function create() {
       cd "${fiddleSubDir}" || exit 4;
       $(isAndroidInstalled) || exit 1;
       $(isGradleInstalled) || exit 2;
+      $(isGitInstalled) || exit 5;
       androidCreate $1 ${bornOnDate} ${projectName} || exit 3;
   )
   rc=$?; catch ${rc};

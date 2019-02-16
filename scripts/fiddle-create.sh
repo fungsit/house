@@ -33,6 +33,7 @@
 # 05/26/2018 - See CHANGELOG @ 230_update_and_shrinkwrap
 # 08/01/2018 - See CHANGELOG @ 006_fiddle_react
 # 11/21/2018 - See CHANGELOG @  262_add_chef_setup
+# 12/10/2018 - See CHANGELOG @ 273_android_debug
 # ---------------------------------------------------------------------------------------------------|
 
 this=$0;
@@ -54,7 +55,6 @@ source bin/_types.sh;
 
     case $1 in
         'android')
-            source bin/android/.androidrc;
             source bin/android/_install.sh;
             source bin/android/_create.sh;
             create $2 || exit 107;

@@ -16,6 +16,7 @@
 # 08/04/2018 - See CHANGELOG @ 006_fiddle_react
 # 11/21/2018 - See CHANGELOG @ 262_add_chef_setup
 # 11/24/2018 - See CHANGELOG @ 265_nativescript_14
+# 12/10/2018 - See CHANGELOG @ 273_android_debug
 # ---------------------------------------------------------------------------------------------------|
 
 export HOME_ROOT=$(mapHomePath;);
@@ -103,4 +104,7 @@ export __CHEF_KITCHEN_PLATFORM_DRIVER_BOX_URL="learningchef/centos65";
 export __CHEF_COOKBOOK_IS_LOGIN_SPLASH="true";
 
 
-
+# =================================================
+# ANDROID |||||||||||||||||||||||||||||||||||||||||
+#
+export __ANDROID_SEEDER="https://github.com/bradyhouse/android-seed";

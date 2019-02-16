@@ -1,7 +1,7 @@
 Android (delete)
 ======
 
-Executing the command `./fiddle.sh "delete" "android" "0000"` produces the following output.
+Executing the command `fiddle "delete" "android" "0000"` produces the following output.
 
       {{ ʕ・ɭ・ʔ }}
       FIDDLE.SH
