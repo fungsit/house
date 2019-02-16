@@ -61,21 +61,28 @@ In order to run android based fiddles, android commandline tools need to be setu
 
     `brew cask install android-sdk`
 
-5.  Set the ANDROID_HOME system environment variable in your .zshrc (and/or) .bash_profile files:
+5.  Set the ANDROID_* system variables in your .zshrc (and/or) .bash_profile files:
 
-    `export ANDROID_HOME=/usr/local/share/android-sdk`
+    `
+    ### ANDROID
+    export ANDROID_HOME=/usr/local/share/android-sdk;
+    export ANDROID_SDK_ROOT=$ANDROID_HOME;
+    export ANDROID_SDK_HOME=/Users/<username>/.android;
+    export ANDROID_AVD_HOME=$ANDROID_SDK_HOME/avd;
+    export PATH=$PATH:"$ANDROID_SDK_ROOT/tools/bin";
+    `
 
 6.  install all packages for the Android SDK Platform 28, Android SDK Build-Tools 28.0.3 or later, Android Support
     Repository, Google Repository and any other SDKs that you may need:
 
     `$ANDROID_HOME/tools/bin/sdkmanager "tools" "emulator" "platform-tools" "platforms;android-28" "build-tools;28.0.3"
-    "extras;android;m2repository" "extras;google;m2repository"`
+    "extras;android;m2repository"`
 
 7.  Launch Android Studio
 
 8.  Under `Configure` open `SDK Manager` 
 
-9.  Goto the SDK Tools tab, select and install all libraries or (as of the writing of this doc):
+9.  Go to the SDK Tools tab, select and install all libraries or (as of the writing of this doc):
 
     `
     * Google Play services version 49 
@@ -98,7 +105,9 @@ In order to run android based fiddles, android commandline tools need to be setu
 
 11. Create an Android Virtual Device that supports `Google Play`. The device should be called `fiddler`
 
-12. To test your configuration, use the link:start.md[fiddle.sh start ...] command
+12. Verify that you can startup of the `fiddler` virtual device
+    
+13. TBW
 
 
 == Online Resources
