@@ -71,9 +71,32 @@ In order to run android based fiddles, android commandline tools need to be setu
     `$ANDROID_HOME/tools/bin/sdkmanager "tools" "emulator" "platform-tools" "platforms;android-28" "build-tools;28.0.3"
     "extras;android;m2repository" "extras;google;m2repository"`
 
-7.  Launch Android Studio and open `Android Virtual Device (AVD) Manager`, create an Android Virtual Device, called `fiddler`
+7.  Launch Android Studio
 
-8.  To test your configuration, use the link:start.md[fiddle.sh start ...] command
+8.  Under `Configure` open `SDK Manager` 
+
+9.  Goto the SDK Tools tab, select and install all libraries or (as of the writing of this doc):
+
+    * Google Play services version 49 
+    * GPU Debugging tools version 3.1.0
+    * Android Auto Desktop Head Unit emulator version 1.1
+    * Google Play Licensing Library version 1
+    * Google Play Instant Development SDK version 1.6.0
+    * Android Auto API Simulators version 1
+    * CMake 3.10.2.4988404 version 3.10.2
+    * Google Web Driver version 2
+    * NDK version 19.1.5304403
+    * LLDB 3.1 version 3.1.4508709
+    * Documentation for Android SDK version 1
+    * Solver for ConstraintLayout 1.0.2 version 1
+    * Google Play APK Expansion library version 1
+    * ConstraintLayout for Android 1.0.2 version 1
+
+10. Under `Configure` open `AVD Manager` 
+
+11. Create an Android Virtual Device that supports `Google Play`. The device should be called `fiddler`
+
+12. To test your configuration, use the link:start.md[fiddle.sh start ...] command
 
 
 == Online Resources
