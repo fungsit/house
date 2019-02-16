@@ -77,20 +77,20 @@ In order to run android based fiddles, android commandline tools need to be setu
 
 9.  Goto the SDK Tools tab, select and install all libraries or (as of the writing of this doc):
 
-    * Google Play services version 49 
-    * GPU Debugging tools version 3.1.0
-    * Android Auto Desktop Head Unit emulator version 1.1
-    * Google Play Licensing Library version 1
-    * Google Play Instant Development SDK version 1.6.0
-    * Android Auto API Simulators version 1
-    * CMake 3.10.2.4988404 version 3.10.2
-    * Google Web Driver version 2
-    * NDK version 19.1.5304403
-    * LLDB 3.1 version 3.1.4508709
-    * Documentation for Android SDK version 1
-    * Solver for ConstraintLayout 1.0.2 version 1
-    * Google Play APK Expansion library version 1
-    * ConstraintLayout for Android 1.0.2 version 1
+        * Google Play services version 49 
+        * GPU Debugging tools version 3.1.0
+        * Android Auto Desktop Head Unit emulator version 1.1
+        * Google Play Licensing Library version 1
+        * Google Play Instant Development SDK version 1.6.0
+        * Android Auto API Simulators version 1
+        * CMake 3.10.2.4988404 version 3.10.2
+        * Google Web Driver version 2
+        * NDK version 19.1.5304403
+        * LLDB 3.1 version 3.1.4508709
+        * Documentation for Android SDK version 1
+        * Solver for ConstraintLayout 1.0.2 version 1
+        * Google Play APK Expansion library version 1
+        * ConstraintLayout for Android 1.0.2 version 1
 
 10. Under `Configure` open `AVD Manager` 
 
