@@ -60,9 +60,9 @@ In order to run android based fiddles, android commandline tools need to be setu
 
 8.  Under `Configure` open `SDK Manager` 
 
-9.  In the SDK Manager > SDK Platforms tab, select and install the latest version of android
+9.  In the `SDK Manager > SDK Platforms` tab, select and install the latest version of android
 
-10. Use the SDK Path, <<SDK PATH>>, visible in the SDK Manager to set the following ANDROID_* system variables in your .zshrc (and/or) .bash_profile files:
+10. Use the <<SDK PATH>> visible in the SDK Manager to set the following ANDROID_* system variables in your .zshrc (and/or) .bash_profile files:
 
     `
     ### ANDROID
