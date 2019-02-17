@@ -74,22 +74,24 @@ In order to run android based fiddles, android commandline tools need to be setu
     `	    
     	
 11. Go to the SDK Tools tab, select and install the following:
-    `
-    * Google Play services
-    * GPU Debugging tools
-    * Android Auto Desktop Head Unit emulator
-    * Google Play Licensing Library
-    * Google Play Instant Development SDK
-    * Android Auto API Simulators
-    * CMake
-    * Google Web Driver
-    * NDK
-    * LLDB
-    * Documentation for Android SDK
-    * Solver for ConstraintLayout
-    * Google Play APK Expansion library
-    * ConstraintLayout
-    `
+      
+      `
+      * Google Play services
+      * GPU Debugging tools
+      * Android Auto Desktop Head Unit emulator
+      * Google Play Licensing Library
+      * Google Play Instant Development SDK
+      * Android Auto API Simulators
+      * CMake
+      * Google Web Driver
+      * NDK
+      * LLDB
+      * Documentation for Android SDK
+      * Solver for ConstraintLayout
+      * Google Play APK Expansion library
+      * ConstraintLayout
+      `
+      
 12. Under `Configure` open `AVD Manager` 
 
 13. Using AVD Manager, create an Android Virtual Device that supports `Google Play`. The device should be called `fiddler`
