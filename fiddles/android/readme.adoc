@@ -1,5 +1,3 @@
-Java readme.adoc
-
 = Android
 
 Adventures in Android development. This directory is dedicated to exploration of android app development.
