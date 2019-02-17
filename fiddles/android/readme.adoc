@@ -1,3 +1,5 @@
+Java readme.adoc
+
 = Android
 
 Adventures in Android development. This directory is dedicated to exploration of android app development.
@@ -40,8 +42,7 @@ link:https://developer.android.com/studio/[developer.android.com/studio].
 
 == Android Commandline Setup (Mac OS X)
 
-In order to run android based fiddles, android commandline tools need to be setup. To complete this setup run
-`fiddle setup mac android` or complete the following steps manually.
+In order to run android based fiddles, android commandline tools need to be setup. The following procedure outlines the step necessary to complete this process.
 
 
 1.  Install Homebrew:
@@ -57,58 +58,46 @@ In order to run android based fiddles, android commandline tools need to be setu
 
     `export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)`
 
-4.  Install the Android SDK
-
-    `brew cask install android-sdk`
-
-5.  Set the ANDROID_* system variables in your .zshrc (and/or) .bash_profile files:
-
-    `
-    ### ANDROID
-    export ANDROID_HOME=/usr/local/share/android-sdk;
-    export ANDROID_SDK_ROOT=$ANDROID_HOME;
-    export ANDROID_SDK_HOME=/Users/<username>/.android;
-    export ANDROID_AVD_HOME=$ANDROID_SDK_HOME/avd;
-    export PATH=$PATH:"$ANDROID_SDK_ROOT/tools/bin";
-    `
-
-6.  install all packages for the Android SDK Platform 28, Android SDK Build-Tools 28.0.3 or later, Android Support
-    Repository, Google Repository and any other SDKs that you may need:
-
-    `$ANDROID_HOME/tools/bin/sdkmanager "tools" "emulator" "platform-tools" "platforms;android-28" "build-tools;28.0.3"
-    "extras;android;m2repository"`
-
-7.  Launch Android Studio
+4.  Launch Android Studio
 
 8.  Under `Configure` open `SDK Manager` 
 
-9.  Go to the SDK Tools tab, select and install all libraries or (as of the writing of this doc):
+9.  In the SDK Manager > SDK Platforms tab, select and install the latest version of android
+
+10. Use the SDK Path, <<SDK PATH>>, visible in the SDK Manager to set the following ANDROID_* system variables in your .zshrc (and/or) .bash_profile files:
 
     `
-    * Google Play services version 49 
-    * GPU Debugging tools version 3.1.0
-    * Android Auto Desktop Head Unit emulator version 1.1
-    * Google Play Licensing Library version 1
-    * Google Play Instant Development SDK version 1.6.0
-    * Android Auto API Simulators version 1
-    * CMake 3.10.2.4988404 version 3.10.2
-    * Google Web Driver version 2
-    * NDK version 19.1.5304403
-    * LLDB 3.1 version 3.1.4508709
-    * Documentation for Android SDK version 1
-    * Solver for ConstraintLayout 1.0.2 version 1
-    * Google Play APK Expansion library version 1
-    * ConstraintLayout for Android 1.0.2 version 1
+    ### ANDROID
+    export ANDROID_HOME=<<SDK PATH>>;
+    export ANDROID_SDK_ROOT=$ANDROID_HOME;
+    export ANDROID_SDK_HOME=/Users/<<USER NAM>>/.android;
+    export ANDROID_AVD_HOME=$ANDROID_SDK_HOME/avd;
+    export PATH=$PATH:"$ANDROID_SDK_ROOT/tools/bin";
+    `	    
+    	
+11. Go to the SDK Tools tab, select and install the following:
     `
+    * Google Play services
+    * GPU Debugging tools
+    * Android Auto Desktop Head Unit emulator
+    * Google Play Licensing Library
+    * Google Play Instant Development SDK
+    * Android Auto API Simulators
+    * CMake
+    * Google Web Driver
+    * NDK
+    * LLDB
+    * Documentation for Android SDK
+    * Solver for ConstraintLayout
+    * Google Play APK Expansion library
+    * ConstraintLayout
+    `
+12. Under `Configure` open `AVD Manager` 
 
-10. Under `Configure` open `AVD Manager` 
+13. Using AVD Manager, create an Android Virtual Device that supports `Google Play`. The device should be called `fiddler`
 
-11. Create an Android Virtual Device that supports `Google Play`. The device should be called `fiddler`
-
-12. Verify that you can startup of the `fiddler` virtual device
+15. Verify that you can startup the `fiddler` virtual device
     
-13. TBW
-
 
 == Online Resources
 *   link:https://developer.android.com/index.html[Android API libraries and developer tools]
